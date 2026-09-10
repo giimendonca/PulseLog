@@ -1,0 +1,279 @@
+/* =========================
+   PULSELOG
+   PÁGINAS DE AUTENTICAÇÃO
+========================= */
+
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f0f5fa;
+    color: #263238;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.auth-container {
+    width: 100%;
+    max-width: 460px;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    margin-bottom: 25px;
+
+    text-align: center;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    color: #123b6d;
+}
+
+.logo span {
+    color: #1976d2;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.auth-card {
+    padding: 40px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e1e7ed;
+    border-radius: 16px;
+
+    box-shadow: 0 15px 40px rgba(18, 59, 109, 0.10);
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.auth-card h1 {
+    margin-bottom: 8px;
+
+    color: #123b6d;
+
+    font-size: 30px;
+}
+
+.auth-description {
+    margin-bottom: 30px;
+
+    color: #607d8b;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.form-group label {
+    color: #37474f;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.form-group input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #cfd8df;
+    border-radius: 8px;
+
+    background-color: #ffffff;
+
+    color: #263238;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.form-group input::placeholder {
+    color: #9aa9b3;
+}
+
+.form-group input:focus {
+    border-color: #1976d2;
+
+    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.12);
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+.auth-button {
+    width: 100%;
+
+    margin-top: 5px;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #1976d2;
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.auth-button:hover {
+    background-color: #125fae;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   LINK
+========================= */
+
+.auth-footer {
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: #607d8b;
+
+    font-size: 14px;
+}
+
+.auth-footer a {
+    color: #1976d2;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   INFORMAÇÃO DE SEGURANÇA
+========================= */
+
+.password-info {
+    margin-top: -10px;
+
+    color: #78909c;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   MENSAGENS
+========================= */
+
+.form-error {
+    padding: 12px 14px;
+
+    border-radius: 8px;
+
+    background-color: #fdecec;
+
+    color: #c62828;
+
+    font-size: 14px;
+}
+
+.form-success {
+    padding: 12px 14px;
+
+    border-radius: 8px;
+
+    background-color: #eaf3fc;
+
+    color: #1565c0;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .auth-card {
+        padding: 30px 25px;
+    }
+
+    .auth-card h1 {
+        font-size: 26px;
+    }
+
+}

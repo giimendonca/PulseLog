@@ -1,0 +1,426 @@
+/* =========================
+   PULSELOG
+   CADASTRO NFC
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f0f5fa;
+
+    color: #263238;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.nfc-container {
+
+    width: 100%;
+
+    max-width: 480px;
+
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.nfc-logo {
+
+    margin-bottom: 25px;
+
+    text-align: center;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    color: #123b6d;
+}
+
+.nfc-logo span {
+
+    color: #1976d2;
+
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.nfc-card {
+
+    padding: 40px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e1e7ed;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 15px 40px rgba(18, 59, 109, 0.10);
+
+    text-align: center;
+
+}
+
+
+/* =========================
+   ÍCONE NFC
+========================= */
+
+.nfc-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #eaf3fc;
+
+    color: #1976d2;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.nfc-card h1 {
+
+    margin-bottom: 10px;
+
+    color: #123b6d;
+
+    font-size: 28px;
+
+}
+
+
+/* =========================
+   DESCRIÇÃO
+========================= */
+
+.nfc-description {
+
+    margin-bottom: 25px;
+
+    color: #607d8b;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================
+   INFORMAÇÕES
+========================= */
+
+.nfc-info {
+
+    margin-bottom: 25px;
+
+    padding: 18px;
+
+    border-radius: 10px;
+
+    background-color: #f6f8fb;
+
+    text-align: left;
+
+}
+
+.nfc-info h2 {
+
+    margin-bottom: 10px;
+
+    color: #123b6d;
+
+    font-size: 16px;
+
+}
+
+.nfc-info p {
+
+    margin-bottom: 8px;
+
+    color: #607d8b;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+}
+
+.nfc-info p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.nfc-form {
+
+    width: 100%;
+
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+.nfc-button {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #1976d2;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+.nfc-button:hover {
+
+    background-color: #125fae;
+
+    transform: translateY(-1px);
+
+}
+
+
+/* =========================
+   LINK VOLTAR
+========================= */
+
+.back-link {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    color: #1976d2;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+}
+
+.back-link:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================
+   SUCESSO
+========================= */
+
+.success-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #eaf3fc;
+
+    color: #1976d2;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================
+   CÓDIGO
+========================= */
+
+.code-box {
+
+    margin: 25px 0 15px;
+
+    padding: 18px;
+
+    border: 1px solid #e1e7ed;
+
+    border-radius: 10px;
+
+    background-color: #f6f8fb;
+
+}
+
+.code-label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #607d8b;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+}
+
+.code-box strong {
+
+    color: #123b6d;
+
+    font-size: 22px;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* =========================
+   URL
+========================= */
+
+.url-box {
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    background-color: #eaf3fc;
+
+    text-align: left;
+
+}
+
+.url-box p {
+
+    color: #1565c0;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    word-break: break-all;
+
+}
+
+
+/* =========================
+   AVISO
+========================= */
+
+.nfc-warning {
+
+    margin: 20px 0;
+
+    color: #607d8b;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 20px;
+
+    }
+
+    .nfc-card {
+
+        padding: 30px 25px;
+
+    }
+
+    .nfc-card h1 {
+
+        font-size: 25px;
+
+    }
+
+}
