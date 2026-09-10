@@ -153,7 +153,7 @@ $stmt->close();
                 </span>
 
                 <p>
-                    http://SEU-IP/PulseLog/nfc.php?codigo=<?= htmlspecialchars($codigo) ?>
+                    http://SEU-IP/PulseLog/nfc/nfc.php?codigo=<?= htmlspecialchars($codigo) ?>
                 </p>
 
             </div>

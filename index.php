@@ -20,7 +20,7 @@
 
         <nav>
             <a href="auth/login.php">Entrar</a>
-            <a href="setup/cadastro.php" class="btn btn-small">
+            <a href="setup/cadastrar_user.php" class="btn btn-small">
                 Criar conta
             </a>
         </nav>
@@ -51,7 +51,7 @@
 
                 <div class="hero-buttons">
 
-                    <a href="setup/cadastro.php" class="btn">
+                    <a href="setup/cadastrar_user.php" class="btn">
                         Começar agora
                     </a>
 
@@ -238,7 +238,7 @@
                 Crie sua conta e conheça o PulseLog.
             </p>
 
-            <a href="setup/cadastro.php" class="btn">
+            <a href="setup/cadastrar_user.php" class="btn">
                 Criar minha conta
             </a>
 

@@ -25,6 +25,7 @@ CREATE TABLE crises (
     fim DATETIME NULL,
     intensidade INT NULL,
     observacoes TEXT NULL,
+    token_nfc varchar(255) NULL UNIQUE,
 
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
 );

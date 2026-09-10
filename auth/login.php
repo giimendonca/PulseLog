@@ -137,7 +137,7 @@ $cadastro = $_GET['cadastro'] ?? '';
 
                 Ainda não possui uma conta?
 
-                <a href="../setup/cadastro.php">
+                <a href="../setup/cadastrar_user.php">
                     Criar conta
                 </a>
 

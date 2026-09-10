@@ -13,7 +13,6 @@ $codigo = trim($_GET['codigo'] ?? '');
 if ($codigo === '') {
 
     die("Cartão NFC inválido.");
-
 }
 
 
@@ -34,7 +33,6 @@ $stmt = $conn->prepare($sql);
 if (!$stmt) {
 
     die("Erro ao preparar a consulta.");
-
 }
 
 $stmt->bind_param("s", $codigo);
@@ -53,7 +51,6 @@ $stmt->close();
 if (!$tag) {
 
     die("Cartão NFC não encontrado ou inativo.");
-
 }
 
 
@@ -76,7 +73,6 @@ $stmt = $conn->prepare($sql);
 if (!$stmt) {
 
     die("Erro ao preparar a consulta.");
-
 }
 
 $stmt->bind_param("i", $usuario_id);
@@ -96,28 +92,21 @@ if ($crise) {
 
     $crise_id = $crise['id'];
 
+    $token = bin2hex(random_bytes(32));
+
     $sql = "UPDATE crises
-            SET fim = NOW()
-            WHERE id = ?";
+        SET fim = NOW(), token_nfc = ?
+        WHERE id = ?";
 
     $stmt = $conn->prepare($sql);
-
-    if (!$stmt) {
-
-        die("Erro ao preparar a atualização.");
-
-    }
-
-    $stmt->bind_param("i", $crise_id);
-
+    $stmt->bind_param("si", $token, $crise_id);
     $stmt->execute();
-
     $stmt->close();
 
-    $acao = "finalizada";
+    header("Location: dados.php?token=" . urlencode($token));
+    exit();
 
-
-// 7. Caso contrário, inicia um novo episódio
+    // 7. Caso contrário, inicia um novo episódio
 
 } else {
 
@@ -130,7 +119,6 @@ if ($crise) {
     if (!$stmt) {
 
         die("Erro ao preparar o registro.");
-
     }
 
     $stmt->bind_param("i", $usuario_id);
@@ -140,7 +128,6 @@ if ($crise) {
     $stmt->close();
 
     $acao = "iniciada";
-
 }
 
 ?>
@@ -155,15 +142,13 @@ if ($crise) {
 
     <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+        content="width=device-width, initial-scale=1.0">
 
     <title>PulseLog | NFC</title>
 
     <link
         rel="stylesheet"
-        href="../assets/css/nfc.css"
-    >
+        href="../assets/css/nfc.css">
 
 </head>
 
@@ -245,8 +230,7 @@ if ($crise) {
 
             <a
                 href="../dashboard/index.php"
-                class="nfc-button"
-            >
+                class="nfc-button">
                 Ir para o dashboard
             </a>
 

@@ -424,3 +424,71 @@ body {
     }
 
 }
+
+/* =========================
+   FORMULÁRIO DE DADOS
+========================= */
+
+.nfc-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.form-group label {
+    color: #37474f;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #cfd8df;
+
+    border-radius: 8px;
+
+    background-color: #ffffff;
+
+    color: #263238;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #1976d2;
+
+    box-shadow:
+        0 0 0 3px rgba(25, 118, 210, 0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+.form-group textarea::placeholder {
+    color: #9aa9b3;
+}
