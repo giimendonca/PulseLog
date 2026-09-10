@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
 $user = "root";
-$password = "";
+$password = "Home@spSENAI2025!";
 $database = "pulse_log";
 
 $conn = new mysqli($host, $user, $password, $database);

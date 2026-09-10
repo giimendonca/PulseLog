@@ -257,6 +257,12 @@
             Registro pessoal de episódios
         </p>
 
+        <p class="legal-links">
+            Projeto acadêmico experimental sem fins comerciais.
+            <a href="termos.php">Termos de Uso</a>
+            <a href="privacidade.php">Política de Privacidade</a>
+        </p>
+
     </footer>
 
 </body>

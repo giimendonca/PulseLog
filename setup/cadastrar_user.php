@@ -37,8 +37,7 @@
             <form
                 action="salvar_user.php"
                 method="post"
-                class="auth-form"
-            >
+                class="auth-form">
 
 
                 <div class="form-group">
@@ -54,8 +53,7 @@
                         maxlength="100"
                         autocomplete="name"
                         placeholder="Digite seu nome"
-                        required
-                    >
+                        required>
 
                 </div>
 
@@ -73,8 +71,7 @@
                         maxlength="150"
                         autocomplete="email"
                         placeholder="Digite seu e-mail"
-                        required
-                    >
+                        required>
 
                 </div>
 
@@ -92,8 +89,7 @@
                         minlength="8"
                         autocomplete="new-password"
                         placeholder="Digite sua senha"
-                        required
-                    >
+                        required>
 
                     <p class="password-info">
                         A senha deve possuir pelo menos 8 caracteres.
@@ -102,10 +98,31 @@
                 </div>
 
 
+                <label class="consentimento">
+
+                    <input
+                        type="checkbox"
+                        name="aceite_lgpd"
+                        value="1"
+                        required>
+
+                    <span>
+                        Li e concordo com os
+                        <a href="../termos.php" target="_blank" rel="noopener">
+                            Termos de Uso
+                        </a>
+                        e a
+                        <a href="../privacidade.php" target="_blank" rel="noopener">
+                            Política de Privacidade
+                        </a>.
+                    </span>
+
+                </label>
+
+
                 <button
                     type="submit"
-                    class="auth-button"
-                >
+                    class="auth-button">
                     Criar conta
                 </button>
 
@@ -120,6 +137,12 @@
                     Entrar
                 </a>
 
+            </div>
+
+            <div class="legal-footer">
+                Projeto acadêmico experimental sem fins comerciais.
+                <a href="../termos.php">Termos de Uso</a>
+                <a href="../privacidade.php">Privacidade</a>
             </div>
 
         </section>

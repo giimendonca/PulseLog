@@ -21,15 +21,13 @@ $cadastro = $_GET['cadastro'] ?? '';
 
     <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+        content="width=device-width, initial-scale=1.0">
 
     <title>Login | PulseLog</title>
 
     <link
         rel="stylesheet"
-        href="../assets/css/auth.css"
-    >
+        href="../assets/css/auth.css">
 
 </head>
 
@@ -83,8 +81,7 @@ $cadastro = $_GET['cadastro'] ?? '';
             <form
                 action="entrar.php"
                 method="post"
-                class="auth-form"
-            >
+                class="auth-form">
 
                 <div class="form-group">
 
@@ -99,8 +96,7 @@ $cadastro = $_GET['cadastro'] ?? '';
                         maxlength="150"
                         autocomplete="email"
                         placeholder="Digite seu e-mail"
-                        required
-                    >
+                        required>
 
                 </div>
 
@@ -117,16 +113,14 @@ $cadastro = $_GET['cadastro'] ?? '';
                         name="senha"
                         autocomplete="current-password"
                         placeholder="Digite sua senha"
-                        required
-                    >
+                        required>
 
                 </div>
 
 
                 <button
                     type="submit"
-                    class="auth-button"
-                >
+                    class="auth-button">
                     Entrar
                 </button>
 
@@ -141,6 +135,12 @@ $cadastro = $_GET['cadastro'] ?? '';
                     Criar conta
                 </a>
 
+            </div>
+
+            <div class="legal-footer">
+                Projeto acadêmico experimental sem fins comerciais.
+                <a href="../termos.php">Termos de Uso</a>
+                <a href="../privacidade.php">Privacidade</a>
             </div>
 
         </section>

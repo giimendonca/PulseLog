@@ -19,13 +19,14 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $nome = trim($_POST['nome'] ?? '');
 $email = trim($_POST['email'] ?? '');
 $senha = $_POST['senha'] ?? '';
+$aceite_lgpd = $_POST['aceite_lgpd'] ?? '';
 
 
 // ========================================
 // 3. Verifica campos obrigatórios
 // ========================================
 
-if ($nome === '' || $email === '' || $senha === '') {
+if ($nome === '' || $email === '' || $senha === '' || $aceite_lgpd !== '1') {
     die("Todos os campos são obrigatórios.");
 }
 
@@ -100,8 +101,8 @@ $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
 // 9. Insere o usuário
 // ========================================
 
-$sql = "INSERT INTO usuarios (nome, email, senha)
-        VALUES (?, ?, ?)";
+$sql = "INSERT INTO usuarios (nome, email, senha, aceite_lgpd, aceite_lgpd_em)
+    VALUES (?, ?, ?, 1, NOW())";
 
 $stmt = $conn->prepare($sql);
 
